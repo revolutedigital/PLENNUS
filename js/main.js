@@ -37,7 +37,7 @@
       densidade: 'Progressiva',
       pillow: 'Euro Top',
       techs: ['FIR Power', 'FIR NG', 'MFP', 'Rabatan', 'Íon Balls', 'Magnetos', 'EPS 2000'],
-      imagens: ['star-prime-1.jpg', 'star-prime-2.jpg', 'star-prime-3.jpg'],
+      imagens: ['star-prime-1.png', 'star-prime-2.png', 'star-prime-3.png'],
       idealPara: ['Quem busca o melhor', 'Dores crônicas', 'Profissionais intensos']
     },
     'american-fir': {
@@ -49,7 +49,7 @@
       densidade: 'Progressiva',
       pillow: 'Euro Top',
       techs: ['FIR Power', 'FIR NG', 'MFP', 'Rabatan', 'Íon Balls', 'Magnetos', 'BioPower', 'EPS 2000', 'Íons de Prata'],
-      imagens: ['american-1.jpg', 'american-2.jpeg', 'american-3.jpeg', 'american-4.png'],
+      imagens: ['american-1.png', 'american-2.png', 'american-3.png', 'american-4.png'],
       idealPara: ['Casais exigentes', 'Quem quer massagem ativa', 'Tecnologia máxima']
     },
     'evolution-gz-bio': {
@@ -61,7 +61,7 @@
       densidade: 'Progressiva G-Zero',
       pillow: 'Euro Top',
       techs: ['FIR Power', 'FIR NG', 'MFP', 'Rabatan', 'Íon Balls (12 cápsulas)', 'BioPower', 'G-Zero', 'EPS 2000', 'Íons de Prata'],
-      imagens: ['evo-gz-bio-1.png', 'evo-gz-bio-2.jpeg', 'evo-gz-bio-3.jpeg', 'evo-gz-bio-4.jpeg'],
+      imagens: ['evo-gz-bio-1.png', 'evo-gz-bio-2.png', 'evo-gz-bio-3.png', 'evo-gz-bio-4.png'],
       idealPara: ['Problemas posturais', 'Insônia', 'Máximo de tecnologia terapêutica']
     },
     'evolution-gz-relax': {
@@ -73,7 +73,7 @@
       densidade: 'Progressiva G-Zero',
       pillow: 'Euro Top',
       techs: ['FIR Power', 'FIR NG', 'MFP', 'Rabatan', 'Íon Balls (12)', 'Relax System', 'G-Zero', 'EPS 2000', 'Íons de Prata'],
-      imagens: ['evo-gz-relax-1.png', 'evo-gz-relax-2.jpeg', 'evo-gz-relax-3.jpeg', 'evo-gz-relax-4.jpeg'],
+      imagens: ['evo-gz-relax-1.png', 'evo-gz-relax-2.png', 'evo-gz-relax-3.png', 'evo-gz-relax-4.png'],
       idealPara: ['Relaxamento profundo', 'Casais', 'Controle total pelo celular']
     },
     'evolution-automassagem': {
@@ -85,7 +85,7 @@
       densidade: 'Progressiva (6 camadas)',
       pillow: 'Euro Top',
       techs: ['FIR Power', 'FIR NG', 'MFP', 'Rabatan', 'Íon Balls', 'Magnetos', 'EPS 2000'],
-      imagens: ['evo-auto-1.png', 'evo-auto-2.jpeg', 'evo-auto-3.jpeg', 'evo-auto-4.jpeg'],
+      imagens: ['evo-auto-1.png', 'evo-auto-2.png', 'evo-auto-3.png', 'evo-auto-4.png'],
       idealPara: ['Automassagem natural', 'Dores musculares', 'Ventilação superior']
     },
     'sleep-fir': {
@@ -97,7 +97,7 @@
       densidade: 'Progressiva',
       pillow: null,
       techs: ['FIR Power', 'FIR NG', 'MFP', 'Rabatan', 'Magnetos', 'BioPower', 'EPS 2000'],
-      imagens: ['sleep-fir-1.png', 'sleep-fir-2.jpeg', 'sleep-fir-3.jpeg', 'sleep-fir-4.jpeg'],
+      imagens: ['sleep-fir-1.png', 'sleep-fir-2.png', 'sleep-fir-3.png', 'sleep-fir-4.png'],
       idealPara: ['Primeiro colchão científico', 'Custo-benefício', 'BioPower acessível']
     },
     'quantum-fir-gz': {
@@ -109,7 +109,7 @@
       densidade: 'Progressiva G-Zero (7 camadas)',
       pillow: null,
       techs: ['FIR Power', 'FIR NG', 'MFP', 'Rabatan', 'Magnetos', 'BioPower', 'G-Zero', 'EPS 2000'],
-      imagens: ['quantum-1.png', 'quantum-2.jpeg', 'quantum-3.jpeg', 'quantum-4.jpeg'],
+      imagens: ['quantum-1.png', 'quantum-2.png', 'quantum-3.png', 'quantum-4.png'],
       idealPara: ['Inovação quântica', 'Equilíbrio postural', 'Tecnologia de ponta']
     }
   };

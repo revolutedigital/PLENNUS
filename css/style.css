@@ -799,7 +799,6 @@ body::after {
   width: 100%;
   aspect-ratio: 4/3;
   overflow: hidden;
-  background: var(--dark-deeper);
 }
 
 .product-hero-card-image img {
@@ -832,7 +831,6 @@ body::after {
   height: 220px;
   overflow: hidden;
   position: relative;
-  background: var(--dark-deeper);
 }
 
 .product-card-image img {

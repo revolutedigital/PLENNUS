@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz do Colchão Ideal — Plennus Bem-Estar | Nipponflex</title>
+  <meta name="description" content="Descubra o colchão Nipponflex ideal para você. Responda 4 perguntas e receba uma recomendação personalizada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Playfair+Display:wght@700;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav scrolled" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="none">
+      <path d="M50 8 C25 8, 8 30, 8 50 C8 75, 30 92, 50 92 C35 85, 28 70, 28 50 C28 30, 40 15, 50 8Z" fill="currentColor" opacity="0.9"/>
+      <circle cx="38" cy="35" r="2.5" fill="currentColor" opacity="0.5"/>
+      <circle cx="25" cy="55" r="1.5" fill="currentColor" opacity="0.4"/>
+      <circle cx="42" cy="70" r="2" fill="currentColor" opacity="0.3"/>
+      <path d="M50 2 L52 8 L50 6 L48 8Z" fill="currentColor" opacity="0.8"/>
+    </svg>
+    PLENNUS
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#colchoes">Colchões</a></li>
+    <li><a href="index.html#tecnologias">Tecnologias</a></li>
+    <li><a href="quiz.html" class="active">Quiz</a></li>
+    <li><a href="https://wa.me/5515996340480?text=Ol%C3%A1!%20Vim%20pelo%20site%20Plennus%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20colch%C3%B5es%20Nipponflex." class="nav-cta" target="_blank" rel="noopener">Fale Conosco</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" id="navOverlay">
+  <a href="index.html#colchoes" class="nav-overlay-link">Colchões</a>
+  <a href="index.html#tecnologias" class="nav-overlay-link">Tecnologias</a>
+  <a href="quiz.html" class="nav-overlay-link">Quiz do Colchão</a>
+  <a href="https://wa.me/5515996340480" class="nav-overlay-link" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<!-- Quiz Container -->
+<div class="quiz-container" id="quizContainer">
+  <div class="stars-container" id="quizStars"></div>
+
+  <!-- Progress -->
+  <div class="quiz-progress" id="quizProgress">
+    <div class="quiz-progress-dot active"></div>
+    <div class="quiz-progress-dot"></div>
+    <div class="quiz-progress-dot"></div>
+    <div class="quiz-progress-dot"></div>
+  </div>
+
+  <!-- Step 1: Sleep Position -->
+  <div class="quiz-step active" id="step1">
+    <h2 class="quiz-question">Como você dorme?</h2>
+    <div class="quiz-options" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="quiz-option" data-value="costas">
+        <span class="quiz-option-icon">
+          <svg viewBox="0 0 60 40" width="60" height="40" fill="none">
+            <rect x="5" y="25" width="50" height="4" rx="2" stroke="#C8A35F" stroke-width="1.5"/>
+            <ellipse cx="30" cy="22" rx="18" ry="4" stroke="#C8A35F" stroke-width="1.5"/>
+            <circle cx="30" cy="15" r="5" stroke="#C8A35F" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="quiz-option-label">De costas</span>
+      </div>
+      <div class="quiz-option" data-value="lado">
+        <span class="quiz-option-icon">
+          <svg viewBox="0 0 60 40" width="60" height="40" fill="none">
+            <rect x="5" y="25" width="50" height="4" rx="2" stroke="#C8A35F" stroke-width="1.5"/>
+            <path d="M15 22 C20 10, 40 10, 45 22" stroke="#C8A35F" stroke-width="1.5" fill="none"/>
+            <circle cx="15" cy="16" r="5" stroke="#C8A35F" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="quiz-option-label">De lado</span>
+      </div>
+      <div class="quiz-option" data-value="brucos">
+        <span class="quiz-option-icon">
+          <svg viewBox="0 0 60 40" width="60" height="40" fill="none">
+            <rect x="5" y="25" width="50" height="4" rx="2" stroke="#C8A35F" stroke-width="1.5"/>
+            <ellipse cx="30" cy="23" rx="20" ry="3" stroke="#C8A35F" stroke-width="1.5"/>
+            <circle cx="18" cy="18" r="5" stroke="#C8A35F" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="quiz-option-label">De bruços</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Priority -->
+  <div class="quiz-step" id="step2">
+    <h2 class="quiz-question">O que mais importa para você?</h2>
+    <div class="quiz-options" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="quiz-option" data-value="alivio">
+        <span class="quiz-option-icon">◈</span>
+        <span class="quiz-option-label">Alívio de dores e pressão</span>
+      </div>
+      <div class="quiz-option" data-value="circulacao">
+        <span class="quiz-option-icon">☀</span>
+        <span class="quiz-option-label">Circulação e recuperação</span>
+      </div>
+      <div class="quiz-option" data-value="massagem">
+        <span class="quiz-option-icon">✦</span>
+        <span class="quiz-option-label">Massagem inteligente pelo celular</span>
+      </div>
+      <div class="quiz-option" data-value="postural">
+        <span class="quiz-option-icon">∞</span>
+        <span class="quiz-option-label">Equilíbrio postural completo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3: Needs (Multi-select) -->
+  <div class="quiz-step" id="step3">
+    <h2 class="quiz-question">Você tem alguma dessas necessidades?</h2>
+    <div class="quiz-options" style="grid-template-columns: 1fr; max-width: 500px;">
+      <div class="quiz-option quiz-option-check" data-value="dores">
+        <span class="quiz-checkbox">✓</span>
+        <span class="quiz-option-label">Dores nas costas ou articulações</span>
+      </div>
+      <div class="quiz-option quiz-option-check" data-value="insonia">
+        <span class="quiz-checkbox">✓</span>
+        <span class="quiz-option-label">Insônia ou dificuldade para dormir</span>
+      </div>
+      <div class="quiz-option quiz-option-check" data-value="alergia">
+        <span class="quiz-checkbox">✓</span>
+        <span class="quiz-option-label">Alergias ou sensibilidade respiratória</span>
+      </div>
+      <div class="quiz-option quiz-option-check" data-value="transpiracao">
+        <span class="quiz-checkbox">✓</span>
+        <span class="quiz-option-label">Transpiração excessiva durante o sono</span>
+      </div>
+      <div class="quiz-option quiz-option-check" data-value="nenhuma">
+        <span class="quiz-checkbox">✓</span>
+        <span class="quiz-option-label">Nenhuma das anteriores</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 4: Tech Level -->
+  <div class="quiz-step" id="step4">
+    <h2 class="quiz-question">Qual nível de tecnologia você busca?</h2>
+    <div class="quiz-slider-container">
+      <div class="quiz-slider-labels">
+        <span class="quiz-slider-label active" data-value="essencial">Essencial</span>
+        <span class="quiz-slider-label" data-value="avancado">Avançado</span>
+        <span class="quiz-slider-label" data-value="maximo">Máximo</span>
+      </div>
+      <div style="text-align: center; margin-top: 1rem;">
+        <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--lavender); font-size: 0.95rem;" id="techLevelDesc">Tecnologias base: FIR Power, Rabatan e MFP</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons (shown from step 2+) -->
+  <div class="quiz-nav" id="quizNav" style="display: none;">
+    <button class="btn btn-outline" id="quizBack">← Voltar</button>
+    <button class="btn btn-gold" id="quizNext">Próximo →</button>
+  </div>
+
+  <!-- Result -->
+  <div class="quiz-step quiz-result" id="quizResult">
+    <h2 class="quiz-result-headline" id="resultHeadline"></h2>
+    <div class="quiz-result-card" id="resultCard">
+      <img src="" alt="" id="resultImg">
+      <div>
+        <div class="product-badge" id="resultBadge"></div>
+        <h3 class="product-name" id="resultName" style="margin-bottom: 0.8rem;"></h3>
+        <p class="product-desc" id="resultDesc"></p>
+        <div class="product-techs" id="resultTechs" style="margin-bottom: 1rem;"></div>
+        <a href="#" class="btn btn-gold" id="resultCTA" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/></svg>
+          Falar sobre este colchão
+        </a>
+      </div>
+    </div>
+    <p class="quiz-result-secondary" id="resultSecondary"></p>
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+      <a href="index.html#colchoes" class="btn btn-outline">Ver todos os modelos →</a>
+      <button class="btn btn-link" id="quizRestart">Refazer o quiz</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="brand-footer">
+  <div class="footer-logo">PLENNUS</div>
+  <div class="footer-sub">Bem-Estar · Ciência do Sono</div>
+  <div class="footer-links">
+    <a href="index.html#colchoes">Colchões</a>
+    <a href="index.html#tecnologias">Tecnologias</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="https://wa.me/5515996340480" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Plennus Bem-Estar. Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

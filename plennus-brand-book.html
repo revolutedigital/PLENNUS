@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plennus Bem-Estar — Brand Book</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Raleway:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --deep-navy: #0B1026;
+  --midnight: #141B33;
+  --gold: #C8A35F;
+  --gold-light: #E8D5A3;
+  --gold-glow: #F5E6C0;
+  --cream: #FBF7EF;
+  --soft-white: #F5F0E8;
+  --warm-gray: #9B9285;
+  --plum: #3D2B4F;
+  --lavender: #8B7BA5;
+  --rose: #C4867A;
+  --sage: #7A9B8A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: var(--deep-navy);
+  color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* =========== HERO =========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(ellipse at 50% 30%, #1a2344 0%, var(--deep-navy) 70%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 40%, rgba(200, 163, 95, 0.04) 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, rgba(139, 123, 165, 0.03) 0%, transparent 50%);
+  animation: auroraShift 20s ease-in-out infinite;
+}
+
+@keyframes auroraShift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(2%, -1%) rotate(1deg); }
+  66% { transform: translate(-1%, 2%) rotate(-0.5deg); }
+}
+
+/* Stars */
+.stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--gold-light);
+  border-radius: 50%;
+  animation: twinkle var(--duration) ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: var(--max-opacity); transform: scale(1); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.brand-badge {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(200, 163, 95, 0.3);
+  padding: 10px 28px;
+  margin-bottom: 3rem;
+  animation: fadeInUp 1.5s ease-out 0.3s both;
+}
+
+.hero-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  color: var(--cream);
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  animation: fadeInUp 1.5s ease-out 0.5s both;
+}
+
+.hero-logo span {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--lavender);
+  letter-spacing: 2px;
+  animation: fadeInUp 1.5s ease-out 0.7s both;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInUp 1.5s ease-out 1.2s both;
+}
+
+.scroll-indicator span {
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* =========== SECTIONS COMMON =========== */
+section {
+  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-label::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200, 163, 95, 0.2), transparent);
+  margin: 0 auto;
+}
+
+/* =========== MASCOT SECTION =========== */
+.mascot-section {
+  text-align: center;
+}
+
+.mascot-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.8rem;
+}
+
+.mascot-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--lavender);
+  margin-bottom: 3rem;
+}
+
+.mascot-container {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  margin: 3rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mascot-visual {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.mascot-svg-wrapper {
+  width: clamp(260px, 35vw, 380px);
+  height: clamp(260px, 35vw, 380px);
+  position: relative;
+}
+
+.mascot-glow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle, rgba(200, 163, 95, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+.mascot-info {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.mascot-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.mascot-epithet {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--lavender);
+  margin-bottom: 2rem;
+}
+
+.mascot-description {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: rgba(251, 247, 239, 0.75);
+  margin-bottom: 2rem;
+}
+
+.mascot-traits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.trait {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--gold-light);
+}
+
+.trait-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* =========== MANIFESTO SECTION =========== */
+.manifesto-section {
+  background: linear-gradient(180deg, var(--deep-navy) 0%, #0D1428 50%, var(--deep-navy) 100%);
+  position: relative;
+}
+
+.manifesto-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+
+.manifesto-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+.manifesto-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+}
+
+.manifesto-header p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--lavender);
+}
+
+.manifesto-body {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.manifesto-block {
+  margin-bottom: 3rem;
+  opacity: 1;
+}
+
+.manifesto-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 2;
+  color: rgba(251, 247, 239, 0.85);
+  font-weight: 400;
+}
+
+.manifesto-text em {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.manifesto-text strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.manifesto-highlight {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+  padding: 2.5rem 0;
+  position: relative;
+  line-height: 1.4;
+}
+
+.manifesto-highlight::before,
+.manifesto-highlight::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+.manifesto-highlight::before { margin-bottom: 1.5rem; }
+.manifesto-highlight::after { margin-top: 1.5rem; }
+
+.manifesto-closing {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.manifesto-signature {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.manifesto-sign-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--lavender);
+  letter-spacing: 3px;
+}
+
+/* =========== BRAND VALUES =========== */
+.values-section {
+  padding-top: 4rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(200, 163, 95, 0.1);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.value-card:hover {
+  border-color: rgba(200, 163, 95, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-4px);
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.value-card:hover::before { opacity: 1; }
+
+.value-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.value-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 0.8rem;
+}
+
+.value-desc {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: rgba(251, 247, 239, 0.6);
+}
+
+/* =========== BRAND COLORS =========== */
+.colors-section { padding-top: 2rem; }
+
+.colors-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.color-chip {
+  flex: 1;
+  min-width: 120px;
+}
+
+.color-swatch {
+  width: 100%;
+  height: 80px;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.color-name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+}
+
+.color-hex {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  color: var(--warm-gray);
+  letter-spacing: 1px;
+}
+
+/* =========== TYPOGRAPHY SECTION =========== */
+.typo-section { padding-top: 2rem; }
+
+.typo-showcase {
+  margin-top: 2rem;
+}
+
+.typo-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(200, 163, 95, 0.08);
+}
+
+.typo-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.typo-display {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.1;
+}
+
+.typo-body-display {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--lavender);
+  line-height: 1.6;
+}
+
+.typo-ui-display {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: rgba(251, 247, 239, 0.7);
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+/* =========== FOOTER =========== */
+.brand-footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(200, 163, 95, 0.08);
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.footer-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--warm-gray);
+  margin-bottom: 2rem;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  color: rgba(155, 146, 133, 0.5);
+  letter-spacing: 2px;
+}
+
+/* =========== RESPONSIVE =========== */
+@media (max-width: 768px) {
+  .mascot-container {
+    flex-direction: column;
+  }
+  .mascot-info {
+    text-align: center;
+  }
+  .mascot-traits {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="stars" id="stars"></div>
+  <div class="hero-content">
+    <div class="brand-badge">Brand Book · 2026</div>
+    <h1 class="hero-logo"><span>Plennus</span></h1>
+    <p class="hero-tagline">Bem-Estar</p>
+  </div>
+  <div class="scroll-indicator">
+    <span>Explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ========== MASCOT ========== -->
+<section class="mascot-section">
+  <div class="section-label">Mascote</div>
+  <h2 class="mascot-title">Conheça a Luna</h2>
+  <p class="mascot-subtitle">A guardiã do sono reparador</p>
+
+  <div class="mascot-container">
+    <div class="mascot-visual">
+      <div class="mascot-svg-wrapper">
+        <div class="mascot-glow"></div>
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background glow -->
+          <defs>
+            <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#C8A35F" stop-opacity="0.08"/>
+              <stop offset="100%" stop-color="#0B1026" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="moonGlow" cx="50%" cy="45%" r="35%">
+              <stop offset="0%" stop-color="#F5E6C0" stop-opacity="0.9"/>
+              <stop offset="50%" stop-color="#E8D5A3" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#C8A35F" stop-opacity="0.1"/>
+            </radialGradient>
+            <radialGradient id="faceGlow" cx="50%" cy="40%" r="30%">
+              <stop offset="0%" stop-color="#FBF7EF" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#E8D5A3" stop-opacity="0.9"/>
+            </radialGradient>
+            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+              <feOffset dx="0" dy="4"/>
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="0.15"/>
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C8A35F"/>
+              <stop offset="50%" stop-color="#E8D5A3"/>
+              <stop offset="100%" stop-color="#C8A35F"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Outer aura -->
+          <circle cx="200" cy="200" r="180" fill="url(#bgGlow)">
+            <animate attributeName="r" values="175;185;175" dur="4s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Stars around Luna -->
+          <g opacity="0.6">
+            <circle cx="80" cy="90" r="2" fill="#E8D5A3">
+              <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="320" cy="100" r="1.5" fill="#E8D5A3">
+              <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="310" r="1.8" fill="#E8D5A3">
+              <animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="310" cy="290" r="2" fill="#E8D5A3">
+              <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="60" cy="200" r="1.2" fill="#E8D5A3">
+              <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="340" cy="200" r="1.5" fill="#E8D5A3">
+              <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.2s" repeatCount="indefinite"/>
+            </circle>
+          </g>
+
+          <!-- Moon body - main circle -->
+          <circle cx="200" cy="195" r="100" fill="url(#moonGlow)" filter="url(#softShadow)">
+            <animate attributeName="cy" values="195;190;195" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+          </circle>
+
+          <!-- Face -->
+          <g filter="url(#softShadow)">
+            <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+
+            <!-- Closed eyes (peaceful sleep) -->
+            <path d="M170 185 Q180 178 190 185" stroke="#3D2B4F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M210 185 Q220 178 230 185" stroke="#3D2B4F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+            <!-- Eyelashes -->
+            <line x1="168" y1="186" x2="165" y2="182" stroke="#3D2B4F" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="192" y1="186" x2="195" y2="182" stroke="#3D2B4F" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="208" y1="186" x2="205" y2="182" stroke="#3D2B4F" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="232" y1="186" x2="235" y2="182" stroke="#3D2B4F" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- Gentle smile -->
+            <path d="M185 205 Q200 218 215 205" stroke="#3D2B4F" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+            <!-- Blush spots -->
+            <circle cx="165" cy="198" r="10" fill="#C4867A" opacity="0.2"/>
+            <circle cx="235" cy="198" r="10" fill="#C4867A" opacity="0.2"/>
+          </g>
+
+          <!-- Crown / tiara -->
+          <g>
+            <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+            <path d="M155 115 L170 90 L185 108 L200 78 L215 108 L230 90 L245 115" 
+                  stroke="url(#crownGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Crown jewels -->
+            <circle cx="200" cy="78" r="4" fill="#C8A35F" opacity="0.9">
+              <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="170" cy="92" r="2.5" fill="#8B7BA5" opacity="0.8"/>
+            <circle cx="230" cy="92" r="2.5" fill="#8B7BA5" opacity="0.8"/>
+          </g>
+
+          <!-- Crescent moon accent on body -->
+          <path d="M240 160 Q270 195 240 230" stroke="#C8A35F" stroke-width="1" fill="none" opacity="0.3"/>
+
+          <!-- Cloud bed below Luna -->
+          <g opacity="0.4">
+            <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+            <ellipse cx="200" cy="310" rx="110" ry="20" fill="#E8D5A3" opacity="0.15"/>
+            <ellipse cx="170" cy="305" rx="45" ry="18" fill="#E8D5A3" opacity="0.12"/>
+            <ellipse cx="235" cy="305" rx="50" ry="16" fill="#E8D5A3" opacity="0.12"/>
+            <ellipse cx="200" cy="300" rx="70" ry="15" fill="#E8D5A3" opacity="0.1"/>
+          </g>
+
+          <!-- Floating ZZZ -->
+          <g opacity="0.5">
+            <text x="270" y="150" font-family="Playfair Display, serif" font-size="16" fill="#C8A35F" font-weight="700">
+              z
+              <animate attributeName="y" values="150;140;150" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+            </text>
+            <text x="290" y="130" font-family="Playfair Display, serif" font-size="13" fill="#C8A35F" font-weight="700">
+              z
+              <animate attributeName="y" values="130;118;130" dur="3.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.5s" repeatCount="indefinite"/>
+            </text>
+            <text x="305" y="112" font-family="Playfair Display, serif" font-size="10" fill="#C8A35F" font-weight="700">
+              z
+              <animate attributeName="y" values="112;100;112" dur="4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
+            </text>
+          </g>
+
+          <!-- Small sparkles -->
+          <g>
+            <path d="M130 140 L133 135 L136 140 L133 145 Z" fill="#E8D5A3" opacity="0.4">
+              <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.5s" repeatCount="indefinite"/>
+            </path>
+            <path d="M280 250 L282 246 L284 250 L282 254 Z" fill="#E8D5A3" opacity="0.3">
+              <animate attributeName="opacity" values="0.1;0.5;0.1" dur="3s" repeatCount="indefinite"/>
+            </path>
+            <path d="M120 250 L122 247 L124 250 L122 253 Z" fill="#E8D5A3" opacity="0.35">
+              <animate attributeName="opacity" values="0.15;0.55;0.15" dur="2.8s" repeatCount="indefinite"/>
+            </path>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="mascot-info">
+      <h3 class="mascot-name">Luna</h3>
+      <p class="mascot-epithet">A guardiã que vela o seu descanso</p>
+      <p class="mascot-description">
+        Luna é uma lua coroada — serena, forte e acolhedora. Nasceu da ideia de que toda noite de sono é um ato de cuidado. 
+        Assim como uma mãe que vigia o sono dos filhos, Luna vela silenciosamente por quem confia nela.<br><br>
+        Sua coroa representa a nobreza do autocuidado. Seus olhos fechados transmitem paz e confiança. 
+        Ela flutua sobre uma nuvem porque o descanso Plennus não é deste mundo — é transcendente.<br><br>
+        Luna é feminina, forte e gentil. Ela não grita. Ela acolhe.
+      </p>
+      <div class="mascot-traits">
+        <div class="trait"><span class="trait-dot"></span> Acolhimento</div>
+        <div class="trait"><span class="trait-dot"></span> Força silenciosa</div>
+        <div class="trait"><span class="trait-dot"></span> Proteção</div>
+        <div class="trait"><span class="trait-dot"></span> Nobreza</div>
+        <div class="trait"><span class="trait-dot"></span> Serenidade</div>
+        <div class="trait"><span class="trait-dot"></span> Cuidado materno</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ========== MANIFESTO ========== -->
+<section class="manifesto-section">
+  <div class="section-label">O Manifesto</div>
+
+  <div class="manifesto-header">
+    <h2>Ninguém merece<br>acordar derrotado.</h2>
+    <p>O manifesto Plennus Bem-Estar</p>
+  </div>
+
+  <div class="manifesto-body">
+
+    <div class="manifesto-block">
+      <p class="manifesto-text">
+        Existe uma mentira que o mundo repete todo dia:<br>
+        que descansar é <em>perder tempo</em>.<br>
+        Que dormir menos é ser mais.<br>
+        Que cansaço é troféu.<br>
+        Que aguentar calado é ser forte.
+      </p>
+    </div>
+
+    <div class="manifesto-block">
+      <p class="manifesto-text">
+        <strong>Nós discordamos.</strong><br><br>
+        Nós acreditamos que uma mãe que dormiu bem<br>
+        abraça diferente.<br>
+        Que um pai descansado<br>
+        tem paciência onde antes tinha pressa.<br>
+        Que um corpo restaurado<br>
+        não só vive — ele <em>vive de verdade</em>.
+      </p>
+    </div>
+
+    <div class="manifesto-highlight">
+      "Dormir bem não é luxo.<br>É o primeiro ato de amor próprio do dia<br>— antes mesmo de amanhecer."
+    </div>
+
+    <div class="manifesto-block">
+      <p class="manifesto-text">
+        A Plennus nasceu das mãos de uma mulher<br>
+        que conhece o peso de carregar o mundo nos ombros.<br>
+        Que sabe o que é levantar antes do sol<br>
+        e só deitar quando todo mundo já dormiu.<br>
+        Uma mulher que fez do cuidado a sua força<br>
+        e da força, o seu cuidado.
+      </p>
+    </div>
+
+    <div class="manifesto-block">
+      <p class="manifesto-text">
+        Por isso, cada colchão que entregamos<br>
+        carrega uma promessa simples:<br><br>
+        <strong>Que você acorde inteiro.</strong><br>
+        Não pela metade. Não sobrevivendo.<br>
+        <em>Inteiro.</em><br><br>
+        Com o corpo que não reclama.<br>
+        Com a mente que não pesa.<br>
+        Com a energia de quem dormiu<br>
+        como merecia dormir a vida toda.
+      </p>
+    </div>
+
+    <div class="manifesto-highlight">
+      "Nós não vendemos colchões.<br>Nós devolvemos manhãs."
+    </div>
+
+    <div class="manifesto-block">
+      <p class="manifesto-text">
+        Plennus vem de <em>plenitude</em>.<br>
+        De estar cheio de si.<br>
+        De não precisar de mais nada<br>
+        além de uma boa noite<br>
+        para lembrar quem você é.<br><br>
+        Porque quando o corpo descansa de verdade,<br>
+        a alma acorda primeiro.<br>
+        E o dia começa <strong>antes do despertador</strong>.
+      </p>
+    </div>
+
+    <div class="manifesto-block">
+      <p class="manifesto-text">
+        Então, se o mundo diz que você precisa fazer mais,<br>
+        nós dizemos: <strong>durma melhor.</strong><br><br>
+        Se dizem que descanso é fraqueza,<br>
+        nós mostramos: é a maior das forças.<br><br>
+        Se te ensinaram a ignorar seu corpo,<br>
+        nós estamos aqui para te lembrar:<br>
+        <em>ele é tudo que você tem.</em>
+      </p>
+    </div>
+
+    <div class="manifesto-highlight">
+      "A revolução não começa com um grito.<br>Começa com uma boa noite de sono."
+    </div>
+
+    <div class="manifesto-closing">
+      <p class="manifesto-signature">Plennus</p>
+      <p class="manifesto-sign-sub">Bem-Estar</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ========== BRAND VALUES ========== -->
+<section class="values-section">
+  <div class="section-label">Pilares da Marca</div>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">☾</div>
+      <h3 class="value-title">Descanso como Direito</h3>
+      <p class="value-desc">Dormir bem não é privilégio. É necessidade humana fundamental. Tratamos cada entrega como um ato de justiça com o corpo de quem confia em nós.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">♛</div>
+      <h3 class="value-title">Força com Gentileza</h3>
+      <p class="value-desc">Nascemos da força de uma mulher que ergueu uma família sozinha. Ser forte não é ser duro — é cuidar sem esperar aplausos.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">◈</div>
+      <h3 class="value-title">Ciência que Acolhe</h3>
+      <p class="value-desc">Trabalhamos com a tecnologia mais avançada em sono. Mas tecnologia sem propósito é fria. A nossa aquece, restaura e transforma.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">∞</div>
+      <h3 class="value-title">Plenitude Real</h3>
+      <p class="value-desc">Plennus não é sobre perfeição. É sobre estar inteiro. Inteiro pra trabalhar, pra amar, pra viver. E isso começa toda noite.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ========== BRAND COLORS ========== -->
+<section class="colors-section">
+  <div class="section-label">Paleta de Cores</div>
+
+  <div class="colors-grid">
+    <div class="color-chip">
+      <div class="color-swatch" style="background: #0B1026;"></div>
+      <p class="color-name">Noite Profunda</p>
+      <p class="color-hex">#0B1026</p>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: linear-gradient(135deg, #C8A35F, #E8D5A3);"></div>
+      <p class="color-name">Ouro Luna</p>
+      <p class="color-hex">#C8A35F</p>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: #3D2B4F;"></div>
+      <p class="color-name">Ameixa</p>
+      <p class="color-hex">#3D2B4F</p>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: #8B7BA5;"></div>
+      <p class="color-name">Lavanda</p>
+      <p class="color-hex">#8B7BA5</p>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: #FBF7EF;"></div>
+      <p class="color-name">Creme</p>
+      <p class="color-hex">#FBF7EF</p>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: #C4867A;"></div>
+      <p class="color-name">Rosé</p>
+      <p class="color-hex">#C4867A</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ========== TYPOGRAPHY ========== -->
+<section class="typo-section">
+  <div class="section-label">Tipografia</div>
+
+  <div class="typo-showcase">
+    <div class="typo-item">
+      <p class="typo-label">Display · Playfair Display</p>
+      <p class="typo-display">Plennus Bem-Estar</p>
+    </div>
+    <div class="typo-item">
+      <p class="typo-label">Editorial · Cormorant Garamond</p>
+      <p class="typo-body-display">Onde o corpo descansa,<br>a alma acorda primeiro.</p>
+    </div>
+    <div class="typo-item">
+      <p class="typo-label">Interface · Raleway</p>
+      <p class="typo-ui-display">A tecnologia do sono reparador ao alcance de quem mais precisa. Plennus entrega plenitude — uma noite de cada vez.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="brand-footer">
+  <p class="footer-logo">Plennus</p>
+  <p class="footer-sub">Bem-Estar</p>
+  <p class="footer-copy">© 2026 PLENNUS BEM-ESTAR · DISTRIBUIÇÃO OFICIAL NIPPONFLEX · TODOS OS DIREITOS RESERVADOS</p>
+</footer>
+
+<script>
+// Generate stars
+const starsContainer = document.getElementById('stars');
+for (let i = 0; i < 60; i++) {
+  const star = document.createElement('div');
+  star.className = 'star';
+  star.style.left = Math.random() * 100 + '%';
+  star.style.top = Math.random() * 100 + '%';
+  star.style.setProperty('--duration', (2 + Math.random() * 4) + 's');
+  star.style.setProperty('--max-opacity', (0.3 + Math.random() * 0.7).toString());
+  star.style.animationDelay = Math.random() * 4 + 's';
+  star.style.width = (1 + Math.random() * 2) + 'px';
+  star.style.height = star.style.width;
+  starsContainer.appendChild(star);
+}
+
+// Intersection Observer for fade-in
+const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.manifesto-block, .value-card, .color-chip, .typo-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(30px)';
+  el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
